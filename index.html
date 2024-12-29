@@ -10,11 +10,106 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <!-- 呼出式导航栏 -->
+    <div class="side-nav">
+        <div class="nav-toggle">
+            <i class="fas fa-link"></i>
+            <span>友情链接</span>
+        </div>
+        <div class="nav-content">
+            <ul>
+                <li>
+                    <a href="https://www.minebbs.com/" target="_blank">
+                        <img src="image/tb1.png" alt="MineBBS">
+                        <span>MineBBS</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://klpbbs.com/" target="_blank">
+                        <img src="image/tb2.png" alt="苦力怕论坛">
+                        <span>苦力怕论坛</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.blmcpia.com/" target="_blank">
+                        <img src="image/tb3.png" alt="我的世界小黑论坛">
+                        <span>我的世界小黑论坛</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://namemc.com/" target="_blank">
+                        <img src="image/tb4.png" alt="NameMC">
+                        <span>NameMC</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://littleskin.cn/" target="_blank">
+                        <img src="image/tb5.png" alt="LittleSkin">
+                        <span>LittleSkin</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.chunkbase.com/" target="_blank">
+                        <img src="image/tb6.png" alt="ChunkBase">
+                        <span>ChunkBase</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://mcsrvstat.us/" target="_blank">
+                        <img src="image/tb7.png" alt="我的世界服务器查询网">
+                        <span>我的世界服务器查询网</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.mcseeder.com/" target="_blank">
+                        <img src="image/tb8.jpg" alt="Seeder">
+                        <span>Seeder</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.natfrp.com/" target="_blank">
+                        <img src="image/tb9.png" alt="Sakura Frp">
+                        <span>Sakura Frp</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://optifine.net/" target="_blank">
+                        <img src="image/tb10.ico" alt="optifine">
+                        <span>optifine</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.radmin.com/cn/" target="_blank">
+                        <img src="image/tb11.png" alt="Radmin LAN">
+                        <span>Radmin LAN</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.minebbs.com/resources/pcl2-plain-craft-launcher-2.4256/" target="_blank">
+                        <img src="image/tb12.png" alt="PCL2启动器">
+                        <span>PCL2启动器</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
     <!-- 导航栏 -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand d-flex align-items-center" href="#">
                 <img src="img/logo.jpg" alt="骗子吗服" class="navbar-logo">
+                <div class="minecraft-text">
+                    <span>M</span>
+                    <span>i</span>
+                    <span>n</span>
+                    <span>e</span>
+                    <span>C</span>
+                    <span>r</span>
+                    <span>a</span>
+                    <span>f</span>
+                    <span>t</span>
+                </div>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -54,17 +149,17 @@
                 <div class="col-md-4 stats-item">
                     <h3><i class="fas fa-users"></i></h3>
                     <p>在线玩家</p>
-                    <h4 id="online-players">128</h4>
+                    <h4 id="online-players">加载中...</h4>
                 </div>
                 <div class="col-md-4 stats-item">
                     <h3><i class="fas fa-clock"></i></h3>
                     <p>运行时间</p>
-                    <h4>365天</h4>
+                    <h4 id="uptime">加载中...</h4>
                 </div>
                 <div class="col-md-4 stats-item">
                     <h3><i class="fas fa-star"></i></h3>
                     <p>总注册人数</p>
-                    <h4>10000+</h4>
+                    <h4 id="total-players">加载中...</h4>
                 </div>
             </div>
         </div>
@@ -79,21 +174,42 @@
                     <div class="feature-box">
                         <i class="fas fa-compass feature-icon"></i>
                         <h3>探索冒险</h3>
-                        <p>独特的地形生成，神秘的遗迹探索，等你来发现</p>
+                        <p>独特的地形生成，神秘的遗迹探索，丰富的副本玩法，精心设计的任务系统，让每一次冒险都充满惊喜</p>
                     </div>
                 </div>
                 <div class="col-md-4" data-aos="fade-up">
                     <div class="feature-box">
                         <i class="fas fa-gem feature-icon"></i>
                         <h3>特色经济</h3>
-                        <p>完善的经济系统，玩家商店，自由交易</p>
+                        <p>完善的经济系统，玩家商店，拍卖行，职业系统，打金系统，让你在游戏中体验真实的经济交易</p>
                     </div>
                 </div>
                 <div class="col-md-4" data-aos="fade-left">
                     <div class="feature-box">
                         <i class="fas fa-shield-alt feature-icon"></i>
                         <h3>安全保障</h3>
-                        <p>领地保护，防熊系统，确保玩家财产安全</p>
+                        <p>领地保护，锁箱插件，防熊系统，管理员全天在线，确保玩家财产安全</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mt-4" data-aos="fade-right">
+                    <div class="feature-box">
+                        <i class="fas fa-users feature-icon"></i>
+                        <h3>社交系统</h3>
+                        <p>公会系统，好友系统，结婚系统，聊天系统，让玩家之间互动更加丰富有趣</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mt-4" data-aos="fade-up">
+                    <div class="feature-box">
+                        <i class="fas fa-trophy feature-icon"></i>
+                        <h3>竞技对战</h3>
+                        <p>PVP竞技场，团队战争，Boss战，周常活动，丰富的竞技玩法等你来战</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mt-4" data-aos="fade-left">
+                    <div class="feature-box">
+                        <i class="fas fa-gift feature-icon"></i>
+                        <h3>福利系统</h3>
+                        <p>每日签到，在线奖励，成就系统，月卡特权，让你轻松获得丰厚奖励</p>
                     </div>
                 </div>
             </div>
@@ -108,13 +224,33 @@
                 <div class="col-md-6" data-aos="fade-right">
                     <div class="rule-card">
                         <h4><i class="fas fa-check-circle me-2"></i>友善交流</h4>
-                        <p>禁止辱骂、攻击其他玩家，营造良好游戏环境</p>
+                        <p>1. 禁止辱骂、攻击其他玩家</p>
+                        <p>2. 禁止发布违法、色情、暴力等不良信息</p>
+                        <p>3. 禁止恶意刷屏、散布谣言</p>
                     </div>
                 </div>
                 <div class="col-md-6" data-aos="fade-left">
                     <div class="rule-card">
-                        <h4><i class="fas fa-ban me-2"></i>禁止作弊</h4>
-                        <p>严禁使用任何作弊客户端和外挂程序</p>
+                        <h4><i class="fas fa-ban me-2"></i>游戏规范</h4>
+                        <p>1. 严禁使用任何作弊客户端和外挂程序</p>
+                        <p>2. 禁止利用游戏漏洞获取不正当利益</p>
+                        <p>3. 禁止恶意破坏他人建筑和财产</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mt-4" data-aos="fade-right">
+                    <div class="rule-card">
+                        <h4><i class="fas fa-gavel me-2"></i>交易规则</h4>
+                        <p>1. 禁止任何形式的RMB交易</p>
+                        <p>2. 禁止恶意哄抬物价</p>
+                        <p>3. 交易纠纷请及时联系管理员处理</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mt-4" data-aos="fade-left">
+                    <div class="rule-card">
+                        <h4><i class="fas fa-exclamation-triangle me-2"></i>处罚制度</h4>
+                        <p>1. 违规行为将根据情节轻重给予警告/禁言/封号处理</p>
+                        <p>2. 被封禁账号无法参与游戏内任何活动</p>
+                        <p>3. 对处罚有异议可向管理员申诉</p>
                     </div>
                 </div>
             </div>
@@ -178,6 +314,35 @@
             <p>本服务器与Mojang AB没有从属关系</p>
         </div>
     </footer>
+
+    <!-- 在body标签内添加悬浮球 -->
+    <div class="floating-ball" id="floatingBall">
+    </div>
+
+    <!-- 添加对话框 -->
+    <div class="dialog-box" id="dialogBox">
+        <div class="dialog-content">
+            <div class="dialog-header">
+                <span class="dialog-close">&times;</span>
+            </div>
+            <div class="dialog-body">
+                <p class="question"></p>
+                <p class="answer"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 在body中添加公告栏 -->
+    <div class="announcement-board">
+        <div class="announcement-header">
+            <i class="fas fa-bullhorn"></i>
+            <h3>公告栏</h3>
+        </div>
+        <div class="announcement-content">
+            <p>即将重启骗子吗服，<span class="highlight">彦祖</span>正在筹备资金和人力</p>
+            <p>预计等待时间还有 <span class="countdown" id="countdown">10</span> 天！</p>
+        </div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
