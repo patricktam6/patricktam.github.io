@@ -18,9 +18,10 @@ body::before {
 }
 
 .navbar {
-    padding: 10px 0;
-    background-color: rgba(0, 0, 0, 0.8) !important;
+    padding: 15px 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.8)) !important;
     backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(79, 172, 254, 0.2);
 }
 
 .hero-section {
@@ -95,9 +96,12 @@ body::before {
 }
 
 @keyframes float {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); }
-    100% { transform: translateY(0px); }
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-3px);
+    }
 }
 
 @keyframes pulse-glow {
@@ -312,22 +316,404 @@ footer {
 }
 
 .navbar-brand {
-    padding: 0;
-    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
 
 .navbar-logo {
     width: 40px;
     height: 40px;
     border-radius: 8px;
-    object-fit: cover;
-    transition: all 0.3s ease;
-    border: 2px solid rgba(255, 215, 0, 0.3);
-    box-shadow: 0 0 10px rgba(255, 215, 0, 0.2);
+    border: 2px solid rgba(79, 172, 254, 0.3);
 }
 
 .navbar-logo:hover {
     transform: scale(1.1);
     border-color: rgba(255, 215, 0, 0.8);
     box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+}
+
+/* MineCraft 文字样式 */
+.minecraft-text {
+    display: flex;
+    gap: 2px;
+}
+
+.minecraft-text span {
+    font-family: 'Minecraft', Arial, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    display: inline-block;
+    animation: float 3s ease-in-out infinite;
+    background: linear-gradient(45deg, #4facfe, #00f2fe);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    transform-origin: center;
+}
+
+/* 为每个字母添加不同的动画延迟 */
+.minecraft-text span:nth-child(1) { animation-delay: 0.1s; }
+.minecraft-text span:nth-child(2) { animation-delay: 0.2s; }
+.minecraft-text span:nth-child(3) { animation-delay: 0.3s; }
+.minecraft-text span:nth-child(4) { animation-delay: 0.4s; }
+.minecraft-text span:nth-child(5) { animation-delay: 0.5s; }
+.minecraft-text span:nth-child(6) { animation-delay: 0.6s; }
+.minecraft-text span:nth-child(7) { animation-delay: 0.7s; }
+.minecraft-text span:nth-child(8) { animation-delay: 0.8s; }
+.minecraft-text span:nth-child(9) { animation-delay: 0.9s; }
+
+/* 导航链接样式 */
+.navbar-nav .nav-link {
+    color: white !important;
+    font-size: 1.1em;
+    padding: 0.5rem 1rem;
+    margin: 0 5px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(45deg, #4facfe, #00f2fe);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.navbar-nav .nav-link:hover {
+    color: #4facfe !important;
+}
+
+.navbar-nav .nav-link:hover::after {
+    width: 100%;
+}
+
+/* 添加浮动动画 */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-3px);
+    }
+}
+
+/* 添加呼出式导航栏样式 */
+.side-nav {
+    position: fixed;
+    left: -250px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 250px;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    border-radius: 0 15px 15px 0;
+    transition: left 0.3s ease;
+    z-index: 1000;
+    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.side-nav:hover {
+    left: 0;
+}
+
+.nav-toggle {
+    position: absolute;
+    right: -40px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: #FFD700;
+    padding: 10px;
+    border-radius: 0 10px 10px 0;
+    cursor: pointer;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    font-size: 1.2em;
+    transition: all 0.3s ease;
+}
+
+.nav-toggle i {
+    margin-bottom: 5px;
+}
+
+.nav-content {
+    padding: 20px 0;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.nav-content::-webkit-scrollbar {
+    width: 5px;
+}
+
+.nav-content::-webkit-scrollbar-thumb {
+    background: rgba(255, 215, 0, 0.5);
+    border-radius: 5px;
+}
+
+.nav-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-content li {
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+}
+
+.nav-content li:hover {
+    background: rgba(255, 215, 0, 0.1);
+    transform: translateX(5px);
+}
+
+.nav-content a {
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+.nav-content img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+}
+
+.nav-content a:hover img {
+    transform: scale(1.2);
+}
+
+.nav-content span {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* 添加滚动条美化 */
+.nav-content {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 215, 0, 0.5) transparent;
+}
+
+/* 添加动画效果 */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateX(-10px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+.nav-content li {
+    animation: fadeIn 0.3s ease forwards;
+    opacity: 0;
+    animation-delay: calc(var(--i) * 0.1s);
+} 
+
+/* 修改悬浮球样式 */
+.floating-ball {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    border-radius: 50%;
+    cursor: move;
+    user-select: none;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(79, 172, 254, 0.4);
+    right: 20px;
+    bottom: 20px;
+    font-family: 'Arial', sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* 删除之前的装饰效果 */
+.floating-ball::before,
+.floating-ball::after {
+    display: none;
+}
+
+/* 修改悬浮效果 */
+.floating-ball:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(79, 172, 254, 0.6);
+}
+
+/* 添加问号 */
+.floating-ball::after {
+    content: '?';
+    display: block;
+}
+
+/* 修改脉冲动画 */
+@keyframes pulse {
+    0% { 
+        box-shadow: 0 4px 15px rgba(79, 172, 254, 0.4);
+        filter: brightness(1);
+    }
+    50% { 
+        box-shadow: 0 6px 20px rgba(79, 172, 254, 0.6);
+        filter: brightness(1.1);
+    }
+    100% { 
+        box-shadow: 0 4px 15px rgba(79, 172, 254, 0.4);
+        filter: brightness(1);
+    }
+}
+
+/* 对话框样式 */
+.dialog-box {
+    display: none;
+    position: fixed;
+    z-index: 1001;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 20px;
+    width: 320px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(79, 172, 254, 0.2);
+    color: white;
+    animation: fadeIn 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.dialog-header {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+}
+
+.dialog-close {
+    cursor: pointer;
+    font-size: 24px;
+    color: #FFD700;
+}
+
+.dialog-body {
+    padding: 10px 0;
+}
+
+.question {
+    color: #FFD700;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.answer {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* 提示动画 */
+@keyframes pulse {
+    0% { filter: brightness(1); }
+    50% { filter: brightness(1.1); }
+    100% { filter: brightness(1); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* 添加公告栏样式 */
+.announcement-board {
+    position: fixed;
+    right: 20px;
+    top: 100px;
+    width: 300px;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(79, 172, 254, 0.3);
+    border: 1px solid rgba(79, 172, 254, 0.2);
+    z-index: 999;
+    animation: slideIn 0.5s ease-out;
+}
+
+.announcement-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid rgba(79, 172, 254, 0.3);
+}
+
+.announcement-header i {
+    color: #4facfe;
+    font-size: 24px;
+    margin-right: 10px;
+    animation: shake 2s infinite;
+}
+
+.announcement-header h3 {
+    color: #fff;
+    margin: 0;
+    font-size: 1.2em;
+    text-shadow: 0 0 10px rgba(79, 172, 254, 0.5);
+}
+
+.announcement-content {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.95em;
+    line-height: 1.6;
+}
+
+.announcement-content p {
+    margin-bottom: 10px;
+}
+
+.highlight {
+    color: #4facfe;
+    font-weight: bold;
+    text-shadow: 0 0 5px rgba(79, 172, 254, 0.5);
+}
+
+.countdown {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #00f2fe;
+    text-shadow: 0 0 10px rgba(0, 242, 254, 0.5);
+    animation: pulse 2s infinite;
+}
+
+/* 修改悬浮球位置 */
+.floating-ball {
+    bottom: 20px;
+    right: 20px;
+    top: auto; /* 移除top属性 */
+    transform: none; /* 移除transform */
+}
+
+/* 添加新动画 */
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes shake {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(-10deg); }
+    75% { transform: rotate(10deg); }
 } 
